@@ -43,10 +43,11 @@ export default function MealPlanner() {
             setSelectedPlan={setSelectedPlan}
             menuItems={menuItems}
           />
+          <div className="mb-10"></div>
           <WeeklyMenuPlan weeklyPlan={weeklyPlan} />
         </div>
 
-        <div className="planner-right">
+        <div >
           <SelectedMenu items={selectedMenuData} />
         </div>
       </div>

@@ -1,15 +1,18 @@
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
 export default function MenuVariants({ selectedDay, setSelectedDay, selectedPlan, setSelectedPlan, menuItems }) {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  const nutrient = ["Carbs", "Protein", "Vegetables", "Fruit", "Drink"]
 
   return (
     <section className="menu-variants">
       <h2 className="section-title">MENU VARIANTS</h2>
 
-      <div className="menu-plan-selector">
+      <div className="menu-plan-selector ">
         <label className="selector-label">Select Menu Plan</label>
-        <div className="plan-buttons">
+        <div className="grid grid-cols-2 gap-2">
           <button
-            className={`plan-btn primary ${selectedPlan === "Plan 1" ? "active" : ""}`}
+            className={`plan-btn ${selectedPlan === "Plan 1" ? "active" : ""}`}
             onClick={() => setSelectedPlan("Plan 1")}
           >
             Plan 1
@@ -38,7 +41,9 @@ export default function MenuVariants({ selectedDay, setSelectedDay, selectedPlan
       <div className="day-selector">
         <label className="selector-label">Select Day</label>
         <div className="day-buttons">
-          <button className="arrow-btn">←</button>
+          <button className="arrow-btn">
+            <ChevronLeft/>
+          </button>
           {days.map((day) => (
             <button
               key={day}
@@ -48,17 +53,26 @@ export default function MenuVariants({ selectedDay, setSelectedDay, selectedPlan
               {day}
             </button>
           ))}
-          <button className="arrow-btn">→</button>
+          <button className="arrow-btn">
+            <ChevronRight></ChevronRight>
+          </button>
         </div>
 
-        <div className="menu-display">
-          <h3 className="menu-day-title">{selectedDay}'s Menu</h3>
-          <ul className="menu-list">
-            {menuItems[selectedDay]?.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
+<h3 className="menu-day-title">{selectedDay}'s Menu</h3>
+<div className="menu-display justify-between">
+  <ul className="space-y-2">
+    {nutrient.map((nutrient, idx) => (
+    <li key={idx} className="flex justify-between">
+      <p className="font-medium text-gray-700">{nutrient}:</p>
+      <p className="text-gray-900 font-semibold text-left ml-4">
+        {menuItems[selectedDay]?.[idx] ?? "-"}
+      </p>
+    </li>
+  ))}
+  </ul>
+</div>
+
+        
       </div>
     </section>
   )
