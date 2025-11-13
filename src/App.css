@@ -134,6 +134,7 @@
 /* MENU VARIANTS */
 .menu-variants {
   background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -143,21 +144,22 @@
   font-size: 18px;
   font-weight: 900;
   color: #1f2937;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
 
 .menu-plan-selector {
-  margin-bottom: 32px;
+  margin-bottom: 5px;
 }
 
 .selector-label {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .plan-buttons {
@@ -190,14 +192,14 @@
 }
 
 .day-selector {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 .day-buttons {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -237,14 +239,13 @@
   border: 1px solid #b1b1b1;
   border-radius: 8px;
   padding: 16px;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .menu-day-title {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 12px;
+  color: #383d44;
 }
 
 .menu-list {
@@ -273,8 +274,10 @@
   background: #fff;
   border-radius: 12px;
   padding: 24px;
+  height: fit-content;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  position: sticky;
+  position: flex;
   top: 10px;
 }
 
@@ -334,9 +337,11 @@
 .weekly-menu {
   background: #fff;
   border-radius: 12px;
+  border: 1px solid #e5e7eb;
   padding: 24px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   grid-column: 1 / -1;
+  width: 100%;
 }
 
 .week-grid {
@@ -350,7 +355,7 @@
   background-color: #f9fafb;
   border: 2px solid #e5e7eb;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   padding: 13px;
   transition: all 0.3s ease;
@@ -367,16 +372,16 @@
 
 .day-header {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
   color: #1f2937;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  display: flex;
 }
 
 .day-menu-items {
   list-style: none;
-  font-size: 10px;
+  font-size: 12px;
   color: #6b7280;
   display: flex;
   flex-direction: column;
@@ -400,10 +405,11 @@
 }
 
 .empty-icon {
-  font-size: 24px;
+  font-size: 20px;
   display: block;
   text-align: center;
-  margin-bottom: 8px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .empty-state p {
@@ -418,8 +424,8 @@
 }
 
 .warning-banner {
-  background-color: #fef3c7;
-  border: 1px solid #fcd34d;
+  background-color: #fff8de;
+  border: 1.5px solid #eac448;
   border-radius: 8px;
   padding: 7px 16px;
   display: flex;

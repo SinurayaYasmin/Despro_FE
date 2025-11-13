@@ -1,4 +1,6 @@
-export default function SelectedMenu({ items }) {
+import { Button } from "./ui/button"
+
+export default function SelectedMenu({ items, onConfirm}) {
   const categoryColors = {
     Carbohydrate: "#fde4d0",
     Protein: "#ffe0dbff",
@@ -34,7 +36,7 @@ export default function SelectedMenu({ items }) {
         ))}
       </div>
 
-      <button className="confirm-btn">Confirm</button>
+      <Button className="confirm-btn" onClick={onConfirm}>Confirm</Button>
     </section>
   )
 }

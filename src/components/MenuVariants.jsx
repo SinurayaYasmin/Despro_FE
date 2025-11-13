@@ -42,7 +42,7 @@ export default function MenuVariants({ selectedDay, setSelectedDay, selectedPlan
         <label className="selector-label">Select Day</label>
         <div className="day-buttons">
           <button className="arrow-btn">
-            <ChevronLeft/>
+            <ChevronLeft />
           </button>
           {days.map((day) => (
             <button
@@ -58,21 +58,22 @@ export default function MenuVariants({ selectedDay, setSelectedDay, selectedPlan
           </button>
         </div>
 
-<h3 className="menu-day-title">{selectedDay}'s Menu</h3>
-<div className="menu-display justify-between">
-  <ul className="space-y-2">
-    {nutrient.map((nutrient, idx) => (
-    <li key={idx} className="flex justify-between">
-      <p className="font-medium text-gray-700">{nutrient}:</p>
-      <p className="text-gray-900 font-semibold text-left ml-4">
-        {menuItems[selectedDay]?.[idx] ?? "-"}
-      </p>
-    </li>
-  ))}
-  </ul>
-</div>
+        <h3 className="menu-day-title">{selectedDay}'s Menu</h3>
+        <div className="menu-display justify-between text-left">
+          <ul className="space-y-2">
+            {nutrient.map((nutrient, idx) => (
+              <li key={idx} className="flex justify-between">
+                <p className="font-medium text-gray-700 text-left w-1/2">{nutrient}:</p>
+                <p className="text-gray-900 font-semibold text-left w-1/5">
+                  {menuItems[selectedDay]?.[selectedPlan]?.[idx]
+                    ?? "-"}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        
+
       </div>
     </section>
   )
