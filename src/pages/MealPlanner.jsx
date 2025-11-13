@@ -24,9 +24,7 @@ export default function MealPlanner() {
 
   const selectedMenuData = {
     Carbohydrate: ["Nasi"],
-    Meat: ["Ayam Goreng Telur"],
-    Protein: [],
-    "Ayam Goreng Telur": ["Ayam Goreng Telur"],
+    Protein:["Ayam Goreng Telur"],
     Vegetables: ["Orak-Arik Buncis Wortel"],
     Fruit: ["Papaya"],
     Drink: ["Susu"],
